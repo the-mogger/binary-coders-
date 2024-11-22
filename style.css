@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section {
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #0077b6;
+}
+
+.learnings {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.learnings div {
+  width: 30%;
+  margin: 1rem 0;
+}
+
+form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form textarea {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 400px;
+}
+
+form button {
+  padding: 0.7rem 1.5rem;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #005f8d;
+}
+
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
