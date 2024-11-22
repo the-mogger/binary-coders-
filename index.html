@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Watering App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Watering System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <div class="app-container">
     <header>
-      <h1>Smart Watering System</h1>
+        <nav>
+            <h1>Smart Watering System</h1>
+        </nav>
     </header>
+
     <main>
-      <section id="dashboard">
-        <h2>Dashboard</h2>
-        <div class="water-level">
-          <p>Water Level:</p>
-          <div class="progress-bar">
-            <div id="progress" style="width: 60%;"></div>
-          </div>
-          <p id="water-level">60%</p>
-        </div>
-        <div class="controls">
-          <button id="startBtn">Start Watering</button>
-          <button id="stopBtn">Stop Watering</button>
-        </div>
-      </section>
-      <section id="ai-insights">
-        <h2>AI Insights</h2>
-        <p id="ai-status">Analyzing plant health...</p>
-        <ul>
-          <li>Moisture Level: <span id="moisture-level">Good</span></li>
-          <li>Sunlight: <span id="sunlight-status">Adequate</span></li>
-          <li>Temperature: <span id="temp-status">Optimal</span></li>
-        </ul>
-      </section>
-      <section id="controls">
-        <h2>Smart Controls</h2>
-        <button id="gestureBtn">Gesture Control</button>
-        <button id="voiceBtn">Voice Control</button>
-      </section>
+        <section class="dashboard">
+            <h2>Water Level</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="water-level" style="width: 60%;"></div>
+                <span id="water-percentage">60%</span>
+            </div>
+            <button id="start-watering">Start Watering</button>
+            <button id="stop-watering">Stop Watering</button>
+        </section>
+
+        <section class="ai-insights">
+            <h2>AI-Based Insights</h2>
+            <p id="plant-health">Analyzing plant health...</p>
+            <ul>
+                <li>Moisture Level: <span id="moisture-level">Good</span></li>
+                <li>Sunlight Level: <span id="sunlight-level">Adequate</span></li>
+                <li>Temperature Status: <span id="temperature-status">Optimal</span></li>
+            </ul>
+        </section>
+
+        <section class="smart-control">
+            <h2>Smart Control</h2>
+            <button id="gesture-control">Gesture Control</button>
+            <button id="voice-control">Voice Control</button>
+        </section>
     </main>
+
     <footer>
-      <p>&copy; 2024 Smart Watering System. All rights reserved.</p>
+        <p>© 2024 Smart Watering System. All rights reserved.</p>
     </footer>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
