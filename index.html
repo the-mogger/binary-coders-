@@ -3,82 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Watering System</title>
+  <title>Smart Watering App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Smart Watering System</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#learn">Our Learnings</a></li>
-        <li><a href="#feedback">Feedback</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about" class="section">
-    <h2>About the Project</h2>
-    <p>
-      Our Smart Watering System is a cost-effective solution for plant care. 
-      It uses sensors and AI to automate watering and offers live monitoring 
-      via a mobile app. Gesture and voice controls make plant management easier than ever!
-    </p>
-  </section>
-
-  <section id="features" class="section">
-    <h2>Features</h2>
-    <ul>
-      <li>Automatic watering with smart sensors</li>
-      <li>Gesture and voice-controlled operations</li>
-      <li>Live monitoring via mobile app</li>
-      <li>AI-based plant health analysis</li>
-      <li>Cost-effective and easy to install</li>
-    </ul>
-  </section>
-
-  <section id="learn" class="section">
-    <h2>Our Learnings</h2>
-    <div class="learnings">
-      <div>
-        <h3>Design Thinking</h3>
-        <p>Empathy-driven research, rapid prototyping, and iterative feedback were key to our success.</p>
-      </div>
-      <div>
-        <h3>Startup Transformation</h3>
-        <p>We learned how to balance innovation with market viability while building a scalable business model.</p>
-      </div>
-      <div>
-        <h3>Future Applications</h3>
-        <p>Our approach to design thinking is adaptable to future projects, emphasizing user-centric design and sustainability.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="feedback" class="section">
-    <h2>Feedback</h2>
-    <form id="feedbackForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      <label for="feedback">Your Feedback:</label>
-      <textarea id="feedback" name="feedback" placeholder="Share your thoughts" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="feedbackResult"></div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>For inquiries, reach out to us at <a href="mailto:smartwatering@project.com">smartwatering@project.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Smart Watering System. All rights reserved.</p>
-  </footer>
-
+  <div class="app-container">
+    <header>
+      <h1>Smart Watering System</h1>
+    </header>
+    <main>
+      <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="water-level">
+          <p>Water Level:</p>
+          <div class="progress-bar">
+            <div id="progress" style="width: 60%;"></div>
+          </div>
+          <p id="water-level">60%</p>
+        </div>
+        <div class="controls">
+          <button id="startBtn">Start Watering</button>
+          <button id="stopBtn">Stop Watering</button>
+        </div>
+      </section>
+      <section id="ai-insights">
+        <h2>AI Insights</h2>
+        <p id="ai-status">Analyzing plant health...</p>
+        <ul>
+          <li>Moisture Level: <span id="moisture-level">Good</span></li>
+          <li>Sunlight: <span id="sunlight-status">Adequate</span></li>
+          <li>Temperature: <span id="temp-status">Optimal</span></li>
+        </ul>
+      </section>
+      <section id="controls">
+        <h2>Smart Controls</h2>
+        <button id="gestureBtn">Gesture Control</button>
+        <button id="voiceBtn">Voice Control</button>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Smart Watering System. All rights reserved.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
