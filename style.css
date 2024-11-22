@@ -1,83 +1,63 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
-}
-
-.app-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  text-align: center;
-  margin-bottom: 20px;
+    background-color: #00796b;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  color: #1976d2;
+nav h1 {
+    margin: 0;
 }
 
-section {
-  margin: 20px 0;
+main {
+    padding: 20px;
 }
 
-h2 {
-  font-size: 1.4rem;
-  color: #0d47a1;
-  margin-bottom: 10px;
+.dashboard, .ai-insights, .smart-control {
+    border: 1px solid #00796b;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background: white;
 }
 
-.water-level {
-  text-align: center;
+.progress-container {
+    position: relative;
+    height: 30px;
+    background: #e0f7fa;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .progress-bar {
-  width: 100%;
-  background: #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 10px 0;
-  height: 20px;
+    height: 100%;
+    background: #00796b;
+    transition: width 0.5s ease;
 }
 
-#progress {
-  height: 100%;
-  background: #1e88e5;
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
 }
 
-.controls button {
-  margin: 5px;
-  padding: 10px 20px;
-  border: none;
-  background: #1e88e5;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background: #1565c0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 10px 0;
+button:hover {
+    background-color: #004d40;
 }
 
 footer {
-  text-align: center;
-  margin-top: 20px;
-  color: #555;
-  font-size: 0.8rem;
+    text-align: center;
+    margin-top: 20px;
 }
