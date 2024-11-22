@@ -6,6 +6,7 @@
     <title>Smart Watering System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script> <!-- Load JS after HTML -->
 </head>
 <body>
     <header>
@@ -17,12 +18,21 @@
     <main>
         <section class="dashboard">
             <h2>Water Level</h2>
-            <div class="progress-container">
-                <div class="progress-bar" id="water-level" style="width: 60%;"></div>
+            <div class="circular-progress" id="circular-progress">
+                <svg width="120" height="120">
+                    <circle cx="60" cy="60" r="50" class="circle-bg"></circle>
+                    <circle cx="60" cy="60" r="50" class="circle" id="water-level-circle"></circle>
+                </svg>
                 <span id="water-percentage">60%</span>
             </div>
-            <button id="start-watering">Start Watering</button>
-            <button id="stop-watering">Stop Watering</button>
+            <div class="controls">
+                <button id="increase-water">Increase Water</button>
+                <button id="decrease-water">Decrease Water</button>
+            </div>
+            <div class="action-buttons">
+                <button id="start-watering">Start Watering</button>
+                <button id="stop-watering">Stop Watering</button>
+            </div>
         </section>
 
         <section class="ai-insights">
@@ -45,7 +55,5 @@
     <footer>
         <p>© 2024 Smart Watering System. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

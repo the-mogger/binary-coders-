@@ -1,47 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const startButton = document.getElementById('start-watering');
-    const stopButton = document.getElementById('stop-watering');
-    const waterLevelBar = document.getElementById('water-level');
+document.addEventListener('DOMContentLoaded', () => {
+    const waterLevelCircle = document.getElementById('water-level-circle');
     const waterPercentage = document.getElementById('water-percentage');
-    const plantHealth = document.getElementById('plant-health');
+    const increaseWaterButton = document.getElementById('increase-water');
+    const decreaseWaterButton = document.getElementById('decrease-water');
+    const startWateringButton = document.getElementById('start-watering');
+    const stopWateringButton = document.getElementById('stop-watering');
 
-    let watering = false;
-    let currentLevel = 60; // Initial water level
+    let waterLevel = 60; // Initial water level percentage
 
-    const updateWaterLevel = (change) => {
-        currentLevel = Math.min(100, Math.max(0, currentLevel + change));
-        waterLevelBar.style.width = currentLevel + '%';
-        waterPercentage.textContent = currentLevel + '%';
-    };
+    function updateWaterLevel() {
+        waterPercentage.textContent = `${waterLevel}%`;
+        const offset = (100 - waterLevel) / 100 * 282.6; // Calculate stroke-dashoffset
+        waterLevelCircle.style.strokeDasharray = '282.6';
+        waterLevelCircle.style.strokeDashoffset = offset;
+    }
 
-    startButton.addEventListener('click', () => {
-        if (!watering) {
-            watering = true;
-            plantHealth.textContent = "Watering in progress...";
-            const interval = setInterval(() => {
-                if (currentLevel < 100) {
-                    updateWaterLevel(5); // Simulate filling the tank
-                } else {
-                    clearInterval(interval);
-                    plantHealth.textContent = "Watering complete!";
-                }
-            }, 1000);
+    increaseWaterButton.addEventListener('click', () => {
+        if (waterLevel < 100) {
+            waterLevel += 10;
+            updateWaterLevel();
         }
     });
 
-    stopButton.addEventListener('click', () => {
-        watering = false;
-        plantHealth.textContent = "Watering stopped.";
+    decreaseWaterButton.addEventListener('click', () => {
+        if (waterLevel > 0) {
+            waterLevel -= 10;
+            updateWaterLevel();
+        }
     });
 
-    // Simulate AI insights updates
-    setInterval(() => {
-        const moistureLevels = ['Good', 'Low', 'High'];
-        const sunlightLevels = ['Adequate', 'Low', 'High'];
-        const temperatureStatuses = ['Optimal', 'Too Hot', 'Too Cold'];
+    startWateringButton.addEventListener('click', () => {
+        alert('Watering started!');
+        // Add functionality to start watering
+    });
 
-        document.getElementById('moisture-level').textContent = moistureLevels[Math.floor(Math.random() * moistureLevels.length)];
-        document.getElementById('sunlight-level').textContent = sunlightLevels[Math.floor(Math.random() * sunlightLevels.length)];
-        document.getElementById('temperature-status').textContent = temperatureStatuses[Math.floor(Math.random() * temperatureStatuses.length)];
-    }, 5000); // Update every 5 seconds
+    stopWateringButton.addEventListener('click', () => {
+        alert('Watering stopped!');
+        // Add functionality to stop watering
+    });
+
+    updateWaterLevel(); // Initial call to set the water level
 });
